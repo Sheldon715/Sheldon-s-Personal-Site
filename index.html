@@ -1,64 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Resume
-    </title>
-</head>
-<body>
-    <h1>Sheldon Liu</h1>
-    <img src="./assets/images/profile.jpg" height="200" alt="me" />
-    <hr />
-    <h2>SUMMARY</h2>
-        <pr>I am a student from University of Melbourne with experience in Web developed and Full stack.</pr>
-    <hr />
-        <h2>EDUCATION</h2>
-    <h3>Bachelor of Science(Computer Sorftware and System)</h3>
-    <h4> Jun 2023 - July 2026</h4>
-    <pr>University of Melbourne, Australia </pr>
-    <hr />
-    <h2>PROJECT EXPERIENCE</h2>
-    <h3>1. Crime Rate Prediction System</h3>
-    <pr>Data Analytics Project | Python, scikit-learn, Pandas, Jupyter</pr>
-    <ul>
-        <li>Built a model predicting suburban crime rates using socio-economic indicators.</li>
-        <li>Applied linear and decision tree regression, achieving R² = 0.64.</li>
-        <li>Processed real datasets and delivered insights for policy recommendations.</li>
-    </ul>
-    <h3>2. Virtual Memory Management Simulator</h3>
-    <pr>Systems Programming Project | C, Bit Manipulation, TLB, Page Table, FIFO</pr>
-    <ul>
-        <li>Simulated logical-to-physical address translation with page table and TLB (LRU).</li>
-        <li>Implemented FIFO page eviction and frame allocation.</li>
-        <li>Gained hands-on experience with low-level memory handling.</li>
-    </ul>
-    <h3>3. HTTP Web Proxy with LRU Caching</h3>
-    <pr>Networking Project | C, Sockets, TCP, HTTP/1.1, Cache Management</pr>
-    <ul>
-        <li>Built HTTP proxy server with LRU caching to optimize GET requests.</li>
-        <li>Parsed HTTP headers for cache validation and expiration.</li>
-        <li>Strengthened skills in socket programming and network debugging.</li>
-    </ul>
-    <hr />
-    <h2>SKILLS</h2>
-    <ul>
-        <li>Programming: Python, Java, C</li>
-        <li>Tools: VS Code, PyCharm, IntelliJ, Jupyter Notebook</li>
-        <li>Version Control: Git, GitHub</li>
-        <li>Reporting: Word, PowerPoint, Excel</li>
-        <li>Team Collaboration & Presentation</li>
-        <li>Bilingual: Mandarin & English</li>
-    </ul>
-    <hr />
-    <h2>Other</h2>
-    <ul>
-        <li><a href="./public/about.html">About me</a></li>
-        <li><a href="./public/contact.html">Contact me</a></li>
-    </ul>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sheldon's Personal Site</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-<footer>
-    <p>© Sheldon Liu. All rights reserved.</p>
-</footer>
-</body>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#top" class="brand" aria-label="Home">Sheldon Liu</a>
+        <nav class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="site-main" tabindex="-1">
+      <!-- HERO -->
+      <section id="hero" class="section hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1 id="hero-title">Hi, I'm Sheldon</h1>
+            <p class="tagline">A programmer</p>
+            <p class="sub">
+              I'm a Web and Fullstack Developer. I'm a student from UNIMELB.
+            </p>
+          </div>
+          <div class="hero-media" aria-hidden="true">
+            <img
+              class="avatar-placeholder"
+              src="./assets/images/avatar.jpg"
+              alt="Portrait placeholder"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section
+        id="projects"
+        class="section projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <h2 id="projects-title">Projects</h2>
+          <div class="grid">
+            <article class="card">
+              <h3 class="card-title">
+                <a href="#" aria-label="Project 1 link"
+                  >Crime Rate Prediction System</a
+                >
+              </h3>
+              <p class="card-kicker">
+                Built and evaluated a model to forecast suburb-level crime risk
+                from socio-economic features.
+              </p>
+              <p class="card-meta">
+                Developer / Python · scikit-learn · Pandas · Jupyter
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">
+                <a href="#" aria-label="Project 2 link"
+                  >Virtual Memory Management Simulator</a
+                >
+              </h3>
+              <p class="card-kicker">
+                Simulated address translation with TLB and page tables;
+                implemented FIFO eviction to study miss behavior.
+              </p>
+              <p class="card-meta">
+                Systems · C · Bit ops · TLB/Page Table · FIFO
+              </p>
+            </article>
+            <article class="card">
+              <h3 class="card-title">
+                <a href="#" aria-label="Project 3 link"
+                  >HTTP Web Proxy with LRU Caching</a
+                >
+              </h3>
+              <p class="card-kicker">
+                Proxied HTTP/1.1 GET requests and validated caches to reduce
+                latency and bandwidth.
+              </p>
+              <p class="card-meta">
+                Networking · C · Sockets · TCP · LRU cache
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESUME -->
+      <section
+        id="resume"
+        class="section resume"
+        aria-labelledby="resume-title"
+      >
+        <div class="container">
+          <h2 id="resume-title">Resume</h2>
+
+          <div class="resume-grid">
+            <aside class="resume-rail">
+              <div class="rail-block">
+                <h3 class="rail-heading">Summary</h3>
+                <p>
+                  Third-year Computer Science student at the University of
+                  Melbourne with hands-on experience in Python, Java, and C.
+                  Interested in Fullstack development and Artificial
+                  intelligence.
+                </p>
+              </div>
+              <div class="rail-block">
+                <h3 class="rail-heading">Skills</h3>
+                <ul class="pill-list">
+                  <li>Skill</li>
+                  <li>Tool</li>
+                  <li>Language</li>
+                  <li>Framework</li>
+                </ul>
+              </div>
+            </aside>
+
+            <div class="resume-main">
+              <section aria-labelledby="exp-heading">
+                <h3 id="exp-heading">Experience</h3>
+                <div class="timeline">
+                  <article class="tl-item">
+                    <div class="tl-aside">
+                      <div class="tl-org">Company</div>
+                      <div class="tl-dates">YYYY – YYYY</div>
+                    </div>
+                    <div class="tl-body">
+                      <h4 class="tl-title">Role Title</h4>
+                      <p>
+                        Impact-driven sentence about what you did and why it
+                        mattered.
+                      </p>
+                    </div>
+                  </article>
+                  <article class="tl-item">
+                    <div class="tl-aside">
+                      <div class="tl-org">Company</div>
+                      <div class="tl-dates">YYYY – YYYY</div>
+                    </div>
+                    <div class="tl-body">
+                      <h4 class="tl-title">Role Title</h4>
+                      <p>
+                        Impact-driven sentence about what you did and why it
+                        mattered.
+                      </p>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <section aria-labelledby="edu-heading">
+                <h3 id="edu-heading">Education</h3>
+                <article class="edu-item">
+                  <div class="edu-aside">
+                    <p class="edu-inst">University of Melbourne</p>
+                    <p class="edu-dates">2023 – 2026</p>
+                  </div>
+                  <div class="edu-body">
+                    <p class="edu-degree">Bachelor of Science</p>
+                    <p>Software Systems and Development.</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <div class="about-text">
+            <h2 id="about-title">About</h2>
+            <p>
+              I am a third-year Computer Science student at the University of
+              Melbourne seeking internship opportunities to apply and expand my
+              skills. I have hands-on experience in Python, Java, and C, with
+              projects demonstrating a solid foundation in software development.
+              My interests include Fullstack development, Artificial
+              intelligence. Outside academics, I enjoy
+              photography and fitness, reflecting my attention to detail and
+              self-discipline.
+            </p>
+          </div>
+          <div class="about-media" aria-hidden="true">
+            <img
+              class="photo-placeholder"
+              src="./assets/images/working-photo.jpg"
+              alt="About placeholder"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="section contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container">
+          <h2 id="contact-title">Contact</h2>
+          <ul class="contact-list">
+            <li><a href="mailto:you@example.com">lxd040715@gmail.com</a></li>
+            <li><a href="#" rel="me noopener">GitHub</a></li>
+            <li><a href="#" rel="me noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p class="small muted">© 2025 Sheldon Liu</p>
+      </div>
+    </footer>
+  </body>
 </html>
